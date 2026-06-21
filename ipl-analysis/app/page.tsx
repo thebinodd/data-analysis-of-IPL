@@ -56,7 +56,7 @@ export default function Home() {
         <footer className="flex lg:max-w-[60vw] w-[90vw] items-center justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-3 shadow-[6px_6px_0_0_#111827] sm:px-6">
           
           <p className="text-sm font-semibold w-full text-center text-neutral-950">
-            Made with ❤️ by Binod 
+            Made with ❤️ by Binod & Proudly VibeCoded Frontend
           </p>
 
           
