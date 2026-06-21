@@ -1,3 +1,7 @@
+import Link from "next/link";
+import Navbar from "./components/Navbar";
+
+
 export default function Home() {
   const stats = [
     { value: "17+", label: "Seasons" },
@@ -7,30 +11,9 @@ export default function Home() {
 
   return (
     <main className="max-h-screen  bg-[#f7f4ee] text-neutral-950">
-      <section className=" flex min-h-screen justify-center items-center w-screen  flex-col py-5 sm:px-8 lg:px-10">
-        <header className="flex lg:max-w-[60vw] w-[90vw] items-center justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-3 shadow-[6px_6px_0_0_#111827] sm:px-6">
-          <div className="flex items-center gap-3">
-            <img src="https://static.india.com/wp-content/uploads/2020/08/IPL-Logo.jpg?impolicy=Medium_Resize&w=1200&h=800" className="h-10 rounded-xl" alt="" />
-            <div className="flex flex-col">
-              <p className="text-xs font-extrabold uppercase tracking-[0.35em] text-neutral-600">
-                Data Analysis
-              </p>
-              <p className="text-sm font-semibold text-neutral-950">
-                Indian Premier League insights
-              </p>
-            </div>
-          </div>
-
-          <nav className="flex items-center gap-2 md:flex">
-            <a className="rounded-lg border-2 border-neutral-950 bg-amber-300 px-4 py-2 text-sm font-semibold shadow-[3px_3px_0_0_#111827] transition hover:translate-x-px hover:translate-y-px hover:shadow-none" href="https://instagram.com/the_binodd" target="_blank">
-              Developer
-            </a>
-            <a className="rounded-lg border-2 border-neutral-950 bg-slate-300 px-4 py-2 text-sm font-semibold shadow-[3px_3px_0_0_#111827] transition hover:translate-x-px hover:translate-y-px hover:shadow-none" href="https://github.com/thebinodd" target="_blank">
-              Github
-            </a>
-            
-          </nav>
-        </header>
+      <section className=" flex min-h-screen justify-center items-center w-screen  flex-col pb-5 sm:px-8 lg:px-10">
+        
+        <Navbar heading="IPL Stats Insights" isHome={true} />
 
         <main className="flex flex-1 max-w-[60vw]  w-[90vw] items-center justify-center py-10 sm:py-14">
           <div className="grid  items-center  gap-8 lg:grid-cols-[1.15fr_0.85fr]">
@@ -50,20 +33,20 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-row gap-3 sm:flex-row">
-                <a
+                <Link
                   id="numeric"
                   href="/numeric"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-neutral-950 bg-white px-6 py-4 text-sm font-semibold shadow-[6px_6px_0_0_#111827] transition hover:translate-x-px hover:translate-y-px hover:shadow-none"
                 >
                   Numeric Stats
-                </a>
-                <a
+                </Link>
+                <Link
                   id="graphical"
                   href="/graphical"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-neutral-950 bg-white px-6 py-4 text-sm font-semibold shadow-[6px_6px_0_0_#111827] transition hover:translate-x-px hover:translate-y-px hover:shadow-none"
                 >
                   Graphical Stats
-                </a>
+                </Link>
               </div>
             </section>
 
