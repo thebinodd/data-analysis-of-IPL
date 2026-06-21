@@ -50,7 +50,7 @@ export default function Home() {
               </div>
             </section>
 
-            
+             
           </div>
         </main>
         <footer className="flex lg:max-w-[60vw] w-[90vw] items-center justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-3 shadow-[6px_6px_0_0_#111827] sm:px-6">
