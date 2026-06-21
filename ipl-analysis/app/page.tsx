@@ -25,7 +25,6 @@ export default function Home() {
               <h1 className="mt-6 max-w-2xl lg:max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 A clean starting point for IPL data exploration.
               </h1>
-
               <p className="mt-5 max-w-2xl lg:max-w-4xl text-base leading-7 text-neutral-700 sm:text-lg">
                 Presenting season trends, team performance,
                 player impact, and match patterns from the Indian Premier League
