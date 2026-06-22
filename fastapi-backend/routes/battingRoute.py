@@ -4,13 +4,13 @@ from services.battingService import mostRuns , mostsixes
 
 router = APIRouter(
     prefix="",
-    tags=["Bowling"]
+    tags=["Batting"]
 )
 
 
-@router.get("/mostruns")
-def most_runs():
-    return mostRuns()
+@router.get("/mostRuns")
+def most_runs(head:int):
+    return mostRuns(head)
 
 @router.get("/mostsixes")
 def most_sixes():

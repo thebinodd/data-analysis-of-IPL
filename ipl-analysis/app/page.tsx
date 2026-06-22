@@ -17,7 +17,7 @@ export default function Home() {
 
         <main className="flex flex-1 max-w-[60vw]  w-[90vw] items-center justify-center py-10 sm:py-14">
           <div className="grid  items-center  gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <section className="rounded-4xl h-[65vh] w-[90vw] flex flex-col justify-center items-start lg:w-[60vw] gap-5 lg:gap-1 border-4 border-neutral-950 bg-white p-7 shadow-[10px_10px_0_0_#111827] sm:p-10">
+            <section className="rounded-4xl h-[65vh] w-[90vw] flex flex-col justify-center items-start lg:w-[60vw] gap-2 lg:gap-1 border-4 border-neutral-950 bg-white p-7 shadow-[10px_10px_0_0_#111827] sm:p-10">
               <p className="inline-flex rounded-full border-2 border-neutral-950 bg-lime-300 px-4 py-2 text-xs font-bold uppercase ">
                 Data from 2008-2026 IPL Seasons
               </p>
@@ -47,6 +47,9 @@ export default function Home() {
                   Graphical Stats
                 </Link>
               </div>
+              <p className="lg:text-xs text-[12px] mb-1 mt-1 lg:mt-5 md:mt-4 text-slate-500 text-muted-foreground">
+                Disclaimer : The stats may slightly differ from the actual stats. The dataset used for this project is sourced from Kaggle and may contain discrepancies or errors that could affect the accuracy of the statistics presented.
+              </p>
             </section>
 
              
@@ -55,7 +58,7 @@ export default function Home() {
         <footer className="flex lg:max-w-[60vw] w-[90vw] items-center justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-3 shadow-[6px_6px_0_0_#111827] sm:px-6">
           
           <p className="text-sm font-semibold w-full text-center text-neutral-950">
-            Made with ❤️ by Binod & Proudly VibeCoded Frontend
+            Made with ❤️ by Binod
           </p>
 
           

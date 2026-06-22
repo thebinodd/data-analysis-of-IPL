@@ -1,13 +1,13 @@
 from data.dataset import df
 from cache.statsCache import cache
 
-def mostRuns():
-    
+def mostRuns(head):
+
     if "mostRuns" in cache:
         return mostRuns
     else:
         batsman = df.groupby("batter")
-        result = batsman["runs_batter"].sum().sort_values(ascending=False).to_dict()
+        result = batsman["runs_batter"].sum().sort_values(ascending=False).head(head).to_dict()
         return result
 
 def mostsixes():
