@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 
-
 export default function Home() {
   const stats = [
     { value: "17+", label: "Seasons" },
@@ -13,7 +12,7 @@ export default function Home() {
     <main className="max-h-screen  bg-[#f7f4ee] text-neutral-950">
       <section className=" flex min-h-screen justify-center items-center w-screen  flex-col pb-5 sm:px-8 lg:px-10">
         
-        <Navbar heading="IPL Stats Insights" isHome={true} />
+        <Navbar heading="IPL Insights" isHome={true} />
 
         <main className="flex flex-1 max-w-[60vw]  w-[90vw] items-center justify-center py-10 sm:py-14">
           <div className="grid  items-center  gap-8 lg:grid-cols-[1.15fr_0.85fr]">
@@ -25,7 +24,7 @@ export default function Home() {
               <h1 className="mt-6 max-w-2xl lg:max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                 A clean starting point for IPL data exploration.
               </h1>
-              <p className="mt-5 max-w-2xl lg:max-w-4xl text-base leading-7 text-neutral-700 sm:text-lg">
+              <p className="mt-5 max-w-2xl lg:max-w-4xl text-base lg:leading-7 text-neutral-700 sm:text-lg">
                 Presenting season trends, team performance,
                 player impact, and match patterns from the Indian Premier League
                 dataset in a simple, readable experience. 
@@ -47,7 +46,7 @@ export default function Home() {
                   Graphical Stats
                 </Link>
               </div>
-              <p className="lg:text-xs text-[12px] mb-1 mt-1 lg:mt-5 md:mt-4 text-slate-500 text-muted-foreground">
+              <p className="lg:text-xs text-[12px] mb-1 mt-4 lg:mt-5 md:mt-4 text-slate-500 leading-4 text-muted-foreground">
                 Disclaimer : The stats may slightly differ from the actual stats. The dataset used for this project is sourced from Kaggle and may contain discrepancies or errors that could affect the accuracy of the statistics presented.
               </p>
             </section>
@@ -55,14 +54,9 @@ export default function Home() {
              
           </div>
         </main>
-        <footer className="flex lg:max-w-[60vw] w-[90vw] items-center justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-3 shadow-[6px_6px_0_0_#111827] sm:px-6">
-          
-          <p className="text-sm font-semibold w-full text-center text-neutral-950">
-            Made with ❤️ by Binod
-          </p>
-
-          
-        </footer>
+        <p className="text-xs font-extrabold uppercase lg:tracking-[0.35em] text-neutral-600">
+                Made with ❣️ by Binod
+              </p>
       </section>
       
     </main>

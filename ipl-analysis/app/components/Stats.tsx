@@ -10,6 +10,10 @@ import IndividualCard from './IndividualCard'
 
 const Stats = ({ data, unit }: any) => {
 
+    console.log(data)
+
+
+
     return (
         <div className='flex flex-col justify-center items-center'>
 
@@ -27,11 +31,8 @@ const Stats = ({ data, unit }: any) => {
 
                     : <div className="batsmans flex flex-col w-[90vw] justify-center items-center lg:w-[60vw]">
                         <Heading title={`Most ${unit} by Individual Batsman`} />
-                        {Object.entries(data).map(([value1, value2] , index) => (
-                            <div key={value1} className=' mt-5 '>
-                                <IndividualCard index={index} name={`${value1}`}  stat={`${value2} ${unit}`}  />
-                            </div>
-                        ))}
+
+                        
                     </div>
             }
 

@@ -1,6 +1,5 @@
 from fastapi import APIRouter
-from services.bowlingService import get_best_bowlers
-from services.battingService import mostRuns , mostsixes
+from services.battingService import mostRuns , highestScores 
 
 router = APIRouter(
     prefix="",
@@ -8,10 +7,10 @@ router = APIRouter(
 )
 
 
-@router.get("/mostRuns")
+@router.get("/most_runs")
 def most_runs(head:int):
     return mostRuns(head)
 
-@router.get("/mostsixes")
-def most_sixes():
-    return mostsixes()
+@router.get("/highest_scores")
+def highest_scores(head:int):
+    return highestScores(head)

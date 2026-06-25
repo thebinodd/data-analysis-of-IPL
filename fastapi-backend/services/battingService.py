@@ -1,21 +1,33 @@
-from data.dataset import df
+from data.dataset import data
 from cache.statsCache import cache
 
 def mostRuns(head):
+    result = (
+        data.groupby("batter")["runs_batter"]
+        .sum()
+        .sort_values(ascending=False)
+        .head(head)
+        .reset_index()
+        .rename(columns={"batter": "runs"})
+        .to_dict(orient="records")
+    )
+    return result
 
-    if "mostRuns" in cache:
-        return mostRuns
-    else:
-        batsman = df.groupby("batter")
-        result = batsman["runs_batter"].sum().sort_values(ascending=False).head(head).to_dict()
-        return result
+def highestScores(head):
+    result = (
+    data.groupby(["match_id","batter"])["runs_batter"]
+    .sum()
+    .sort_values(ascending=False)
+    .reset_index()
+    .drop_duplicates(subset="match_id", keep="first")
+    [["batter", "runs_batter"]]
+    .head(100)
+    .to_dict(orient='list')
+)
+    return result
 
-def mostsixes():
-
-    if "mostsixes" in cache:
-        return mostsixes
-    else:
-        mask = df["runs_batter"] == 6
-        result = df[mask]["batter"].value_counts().sort_values(ascending=False).to_dict()
-        return result
+def mostSixes():
+    mask = data["runs_batter"] == 6
+    result = data[mask]["batter"].value_counts().sort_values(ascending=False).to_dict()
+    return result
 

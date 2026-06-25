@@ -1,3 +1,3 @@
 import pandas as pd
 
-df = pd.read_csv("datasets/IPL.csv")
+data = pd.read_csv("datasets/IPL.csv")
