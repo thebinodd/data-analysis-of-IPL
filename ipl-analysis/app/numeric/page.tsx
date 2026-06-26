@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import ListCard from '../components/NameofStats'
-import Heading from '../components/Heading'
 import HeadingSmall from '../components/HeadingSmall'
 
 const page = () => {

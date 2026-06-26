@@ -7,12 +7,11 @@ import Link from 'next/link'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import IndividualCard from './IndividualCard'
+import NameOfStat from '@/app/components/NameofStats'
 
 const Stats = ({ data, unit }: any) => {
-
     console.log(data)
-
-
+    
 
     return (
         <div className='flex flex-col justify-center items-center'>
@@ -29,8 +28,15 @@ const Stats = ({ data, unit }: any) => {
 
 
 
-                    : <div className="batsmans flex flex-col w-[90vw] justify-center items-center lg:w-[60vw]">
-                        <Heading title={`Most ${unit} by Individual Batsman`} />
+                    : <div className="batsmans flex flex-col w-[90vw] justify-center gap-2 items-center lg:w-[60vw]">
+                        <Heading title={`${data.heading}`} />
+
+                        {
+                            Object.entries(data.data).map(([value1 , value2] , index)=>{
+
+                                return <IndividualCard key={index} name={String(value1)} unit={data.unit} stat={String(value2)} index={index} />
+                            })
+                        }
 
                         
                     </div>

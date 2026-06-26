@@ -2,11 +2,6 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
-  const stats = [
-    { value: "17+", label: "Seasons" },
-    { value: "10", label: "Teams" },
-    { value: "100K+", label: "Records" },
-  ];
 
   return (
     <main className="max-h-screen  bg-[#f7f4ee] text-neutral-950">
