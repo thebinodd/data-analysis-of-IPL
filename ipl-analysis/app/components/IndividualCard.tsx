@@ -10,13 +10,7 @@ type Input = {
 
 const IndividualCard = ({ name, index, stat , unit }: Input) => {
     const cardClasses =
-        index === 0
-            ? 'flex lg:max-w-[40vw] hover:scale-99 cursor-pointer w-[90vw] lg:w-[60vw] justify-between rounded-xl border-4 border-neutral-950 bg-yellow-400 px-4 py-2 shadow-[1px_3px_0_0_#111827] sm:px-6'
-            : index === 1
-                ? 'flex lg:max-w-[40vw] hover:scale-99 cursor-pointer w-[88vw] lg:w-[60vw] justify-between rounded-xl border-4 border-neutral-950 bg-[#B0B0B0] px-4 py-2 shadow-[1px_3px_0_0_#111827] sm:px-6'
-                : index === 2
-                    ? 'flex lg:max-w-[40vw] hover:scale-99 cursor-pointer w-[86vw] lg:w-[60vw] justify-between rounded-xl border-4 border-neutral-950 bg-[#B87333] px-4 py-2 shadow-[1px_3px_0_0_#111827] sm:px-6'
-                    : 'flex lg:max-w-[40vw] hover:scale-99 cursor-pointer w-[85vw] lg:w-[60vw] justify-between rounded-xl border-4 border-neutral-950 bg-white px-4 py-2 shadow-[1px_3px_0_0_#111827] sm:px-6'
+        'flex lg:max-w-[40vw]  cursor-pointer w-[90vw] lg:w-[60vw] justify-between rounded-xl border-2 border-neutral-950  px-4 py-2  sm:px-6'
 
     return (
         <div>

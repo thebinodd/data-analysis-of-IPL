@@ -5,7 +5,7 @@ export default async function Page({params}: {params: Promise<{ id: string }>}) 
     const  res  =await getData({id, head:100});
 
     return (
-        <div>
+        <div className="pb-5">
             <Stats data={res} unit="Runs" />
         </div>
     );
