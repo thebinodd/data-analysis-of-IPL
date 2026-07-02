@@ -3,7 +3,7 @@ from data.dataset import data
 
 def mostWickets(head):
 
-    result = (data[data["wicket_kind"]
+    result = (data[data["dismissal_kind"]
                    .notna()]
                    .groupby("bowler")["bowler"]
                    .value_counts()
